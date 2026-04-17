@@ -1,0 +1,88 @@
+---
+import '../styles/global.css';
+//import '../scripts/main.js';
+
+const name = "Javier Montiel López";
+const email = "javiermontiellopez@outlook.com";
+const skills = ["Java", "Spring Boot", "PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "Bootstrap 5", "Tailwind CSS", "Astro", "Git", "API REST"];
+---
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{name} | Full Stack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+    <div class="animated-bg"></div>
+    
+    <nav class="glass-nav reveal-nav">
+        <div class="nav-content">
+            <span class="logo font-orbitron">JM<span>.dev</span></span>
+            <div class="nav-links">
+                <a href="#proyectos">Proyectos</a>
+                <a href="#habilidades">Arsenal</a>
+                <a href="#contacto" class="btn-sm glow-btn">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero reveal">
+            <div class="badge pulse-border">🚀 MODO_DESARROLLADOR: ON</div>
+            <h1 class="font-orbitron">{name}</h1>
+            <p class="subtitle">Desarrollador <span class="text-cyan">Full Stack</span> en prácticas. Especialista en soluciones robustas y modernas.</p>
+            <div class="hero-btns">
+                <a href="https://github.com/javiermontiellopez" target="_blank" class="btn-primary">Explorar GitHub</a>
+                <a href="/CV_JavierMontiel.pdf" class="btn-secondary">Descargar CV</a>
+            </div>
+        </section>
+
+        <section id="proyectos" class="section reveal">
+            <h2 class="section-title font-orbitron"><span class="text-green">#</span> EJECUCIONES</h2>
+            <div class="projects-grid">
+                <div class="glass-card tilt-card delay-1">
+                    <div class="card-icon">🌐</div>
+                    <h3 class="font-orbitron">Sistema Full Stack</h3>
+                    <p>Desarrollo profesional con PHP y Bootstrap 5 en entorno real de prácticas.</p>
+                    <div class="tags"><span>PHP</span><span>Bootstrap 5</span><span>MySQL</span></div>
+                </div>
+                <div class="glass-card tilt-card delay-2">
+                    <div class="card-icon">☕</div>
+                    <h3 class="font-orbitron">Calculadora Java</h3>
+                    <p>Lógica de programación pura aplicada a una herramienta de escritorio.</p>
+                    <div class="tags"><span>Java</span><span>Lógica</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="section reveal">
+            <div class="glass-card full-width hover-glow">
+                <h2 class="section-title font-orbitron"><span class="text-green">#</span> STACK_TECNOLÓGICO</h2>
+                <div class="skills-container">
+                    {skills.map((skill) => (
+                        <div class="skill-tag float-anim">{skill}</div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-section reveal">
+            <div class="glass-card contact-card glow-border">
+                <h2 class="font-orbitron text-cyan">INICIAR_CONEXIÓN</h2>
+                <p>¿Buscas un perfil Full Stack con ganas de aportar? Escríbeme.</p>
+                <a href={`mailto:${email}`} class="email-link font-orbitron">{email}</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; {new Date().getFullYear()} Javier Montiel López</p>
+    </footer>
+    <script src="../scripts/main.js"></script>
+
+</body>
+</html>
