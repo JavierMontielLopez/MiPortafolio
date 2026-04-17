@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-//import '../scripts/main.js';
 
 const name = "Javier Montiel López";
 const email = "javiermontiellopez@outlook.com";
@@ -14,75 +13,106 @@ const skills = ["Java", "Spring Boot", "PHP", "MySQL", "JavaScript", "HTML5", "C
     <title>{name} | Full Stack</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div id="cursor"></div>
-    <div id="cursor-blur"></div>
+<body class="bg-[#020617] text-slate-200 font-sans overflow-x-hidden">
+    
+    <div id="cursor" class="hidden md:block"></div>
+    <div id="cursor-blur" class="hidden md:block"></div>
+    
     <div class="animated-bg"></div>
     
-    <nav class="glass-nav reveal-nav">
-        <div class="nav-content">
-            <span class="logo font-orbitron">JM<span>.dev</span></span>
-            <div class="nav-links">
-                <a href="#proyectos">Proyectos</a>
-                <a href="#habilidades">Arsenal</a>
-                <a href="#contacto" class="btn-sm glow-btn">Contacto</a>
-            </div>
+    <nav class="glass-nav reveal-nav w-[90%] md:w-auto max-w-4xl mx-auto mt-6 flex flex-col md:flex-row justify-between items-center px-6 py-3 rounded-full z-50 fixed left-1/2 -translate-x-1/2">
+        <span class="font-orbitron text-xl text-white font-bold tracking-widest mb-2 md:mb-0">JM<span class="text-cyan-400">.dev</span></span>
+        <div class="flex gap-4 md:gap-8 items-center text-sm md:text-base">
+            <a href="#proyectos" class="hover:text-green-400 transition-colors">Proyectos</a>
+            <a href="#habilidades" class="hover:text-green-400 transition-colors">Arsenal</a>
+            <a href="#contacto" class="border border-cyan-400 text-cyan-400 px-4 py-1 rounded-full hover:bg-cyan-400/10 transition-colors">Contacto</a>
         </div>
     </nav>
 
-    <main class="container">
-        <section class="hero reveal">
-            <div class="badge pulse-border">🚀 MODO_DESARROLLADOR: ON</div>
-            <h1 class="font-orbitron">{name}</h1>
-            <p class="subtitle">Desarrollador <span class="text-cyan">Full Stack</span> en prácticas. Especialista en soluciones robustas y modernas.</p>
-            <div class="hero-btns">
-                <a href="https://github.com/javiermontiellopez" target="_blank" class="btn-primary">Explorar GitHub</a>
-                <a href="/CV_JavierMontiel.pdf" class="btn-secondary">Descargar CV</a>
+    <main class="max-w-5xl mx-auto px-6 pt-32 md:pt-48 pb-20">
+        
+        <section class="text-center reveal mb-32">
+            <div class="inline-block px-4 py-1 border border-green-400 text-green-400 rounded-full text-xs md:text-sm font-orbitron mb-8 shadow-[0_0_15px_rgba(57,255,20,0.2)] animate-pulse">
+                🚀 MODO_DESARROLLADOR: ON
+            </div>
+            <h1 class="font-orbitron text-4xl md:text-6xl lg:text-7xl text-white mb-6 tracking-tight">
+                {name}
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                Desarrollador <span class="text-cyan-400 font-bold">Full Stack</span> en prácticas. Especialista en transformar lógica compleja en interfaces espectaculares.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="https://github.com/javiermontiellopez" target="_blank" class="bg-cyan-400 text-black font-orbitron font-bold py-3 px-8 rounded-lg hover:shadow-[0_0_30px_rgba(0,243,255,0.5)] hover:-translate-y-1 transition-all">
+                    Explorar GitHub
+                </a>
+                <a href="#" class="border border-green-400 text-green-400 font-orbitron font-bold py-3 px-8 rounded-lg hover:bg-green-400/10 hover:shadow-[0_0_20px_rgba(57,255,20,0.3)] transition-all">
+                    Descargar CV
+                </a>
             </div>
         </section>
 
-        <section id="proyectos" class="section reveal">
-            <h2 class="section-title font-orbitron"><span class="text-green">#</span> EJECUCIONES</h2>
-            <div class="projects-grid">
-                <div class="glass-card tilt-card delay-1">
-                    <div class="card-icon">🌐</div>
-                    <h3 class="font-orbitron">Sistema Full Stack</h3>
-                    <p>Desarrollo profesional con PHP y Bootstrap 5 en entorno real de prácticas.</p>
-                    <div class="tags"><span>PHP</span><span>Bootstrap 5</span><span>MySQL</span></div>
+        <section id="proyectos" class="reveal mb-32">
+            <h2 class="font-orbitron text-3xl md:text-4xl text-white mb-10 border-b border-white/10 pb-4">
+                <span class="text-green-400">#</span> EJECUCIONES
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="glass-card tilt-card delay-1 p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="text-5xl mb-4 drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]">🌐</div>
+                    <h3 class="font-orbitron text-2xl text-white mb-3 group-hover:text-cyan-400 transition-colors">Sistema Full Stack</h3>
+                    <p class="text-slate-400 mb-6">Desarrollo profesional integral con enfoque en la experiencia de usuario y bases de datos robustas.</p>
+                    <div class="flex flex-wrap gap-2 font-orbitron text-xs">
+                        <span class="bg-cyan-400/10 text-cyan-400 border border-cyan-400/30 px-3 py-1 rounded">PHP</span>
+                        <span class="bg-cyan-400/10 text-cyan-400 border border-cyan-400/30 px-3 py-1 rounded">Bootstrap 5</span>
+                        <span class="bg-cyan-400/10 text-cyan-400 border border-cyan-400/30 px-3 py-1 rounded">MySQL</span>
+                    </div>
                 </div>
-                <div class="glass-card tilt-card delay-2">
-                    <div class="card-icon">☕</div>
-                    <h3 class="font-orbitron">Calculadora Java</h3>
-                    <p>Lógica de programación pura aplicada a una herramienta de escritorio.</p>
-                    <div class="tags"><span>Java</span><span>Lógica</span></div>
+
+                <div class="glass-card tilt-card delay-2 p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="text-5xl mb-4 drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]">☕</div>
+                    <h3 class="font-orbitron text-2xl text-white mb-3 group-hover:text-cyan-400 transition-colors">Calculadora Java</h3>
+                    <p class="text-slate-400 mb-6">Lógica de programación pura aplicada a una herramienta de escritorio orientada a objetos.</p>
+                    <div class="flex flex-wrap gap-2 font-orbitron text-xs">
+                        <span class="bg-cyan-400/10 text-cyan-400 border border-cyan-400/30 px-3 py-1 rounded">Java</span>
+                        <span class="bg-cyan-400/10 text-cyan-400 border border-cyan-400/30 px-3 py-1 rounded">Lógica POO</span>
+                    </div>
                 </div>
+
             </div>
         </section>
 
-        <section id="habilidades" class="section reveal">
-            <div class="glass-card full-width hover-glow">
-                <h2 class="section-title font-orbitron"><span class="text-green">#</span> STACK_TECNOLÓGICO</h2>
-                <div class="skills-container">
-                    {skills.map((skill) => (
-                        <div class="skill-tag float-anim">{skill}</div>
+        <section id="habilidades" class="reveal mb-32">
+            <div class="glass-card p-8 md:p-12 rounded-3xl text-center border border-white/5 hover:border-cyan-400/30 transition-colors">
+                <h2 class="font-orbitron text-2xl md:text-3xl text-white mb-10">
+                    <span class="text-green-400">#</span> STACK_TECNOLÓGICO
+                </h2>
+                <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+                    {skills.map((skill, index) => (
+                        <div class="float-anim border border-green-400/50 text-green-400 px-4 py-2 rounded-lg font-orbitron text-sm md:text-base hover:bg-green-400 hover:text-black transition-all cursor-crosshair shadow-[0_0_10px_rgba(57,255,20,0.1)]" style={`animation-delay: ${index * 0.1}s`}>
+                            {skill}
+                        </div>
                     ))}
                 </div>
             </div>
         </section>
 
-        <section id="contacto" class="contact-section reveal">
-            <div class="glass-card contact-card glow-border">
-                <h2 class="font-orbitron text-cyan">INICIAR_CONEXIÓN</h2>
-                <p>¿Buscas un perfil Full Stack con ganas de aportar? Escríbeme.</p>
-                <a href={`mailto:${email}`} class="email-link font-orbitron">{email}</a>
+        <section id="contacto" class="reveal delay-1 text-center mb-10">
+            <div class="glass-card p-10 rounded-3xl inline-block w-full md:w-auto border border-cyan-400/20">
+                <h2 class="font-orbitron text-2xl text-cyan-400 mb-4 tracking-widest">INICIAR_CONEXIÓN</h2>
+                <p class="text-slate-400 mb-6">¿Buscas un perfil Full Stack con ganas de aportar?</p>
+                <a href={`mailto:${email}`} class="font-orbitron text-xl md:text-3xl text-white hover:text-cyan-400 hover:drop-shadow-[0_0_15px_rgba(0,243,255,0.5)] transition-all break-all">
+                    {email}
+                </a>
             </div>
         </section>
+
     </main>
 
-    <footer>
-        <p>&copy; {new Date().getFullYear()} Javier Montiel López</p>
+    <footer class="text-center py-8 text-slate-600 font-orbitron text-xs md:text-sm border-t border-white/5">
+        <p>&copy; {new Date().getFullYear()} Javier Montiel López — Sistema Online</p>
     </footer>
-    <script src="../scripts/main.js"></script>
 
+    <script src="../scripts/main.js"></script>
 </body>
 </html>
